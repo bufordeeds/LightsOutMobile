@@ -4,7 +4,8 @@ import {
 	Text,
 	TouchableOpacity,
 	StyleSheet,
-	Dimensions
+	Dimensions,
+	Platform
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -79,8 +80,10 @@ const LightsOutGame = ({ isDark }: LightsOutGameProps) => {
 		(row: number, col: number) => {
 			if (hasWon) return;
 
-			// Trigger haptic feedback
-			Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+			// Trigger haptic feedback only on native platforms
+			if (Platform.OS !== 'web') {
+				Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+			}
 
 			setGrid((currentGrid) => toggleLights(currentGrid, row, col));
 			setMoves((prev) => prev + 1);
@@ -90,7 +93,9 @@ const LightsOutGame = ({ isDark }: LightsOutGameProps) => {
 
 	// Reset game
 	const resetGame = useCallback(() => {
-		Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+		if (Platform.OS !== 'web') {
+			Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+		}
 		setGrid(createInitialGrid());
 		setMoves(0);
 		setHasWon(false);
@@ -101,7 +106,11 @@ const LightsOutGame = ({ isDark }: LightsOutGameProps) => {
 		const allLightsOut = grid.every((row) => row.every((cell) => !cell));
 		if (allLightsOut && moves > 0) {
 			setHasWon(true);
-			Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+			if (Platform.OS !== 'web') {
+				Haptics.notificationAsync(
+					Haptics.NotificationFeedbackType.Success
+				);
+			}
 		}
 	}, [grid, moves]);
 
