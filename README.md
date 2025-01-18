@@ -1,50 +1,125 @@
-# Welcome to your Expo app 👋
+# illuminight 🌟
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern take on the classic "Lights Out" puzzle game, built with React Native and Expo.
 
-## Get started
+## Game Concept
+
+illuminight is a challenging puzzle game where players interact with a 5x5 grid of lights. The goal is simple yet engaging:
+
+-   Tap any light to toggle its state (on/off)
+-   Adjacent lights will also toggle their state
+-   Solve the puzzle by turning all lights on
+-   Every puzzle is mathematically guaranteed to be solvable
+
+## Features
+
+### Current Implementation
+
+-   Core game mechanics with React Native/Expo
+-   Playable through Expo Go
+-   Move counter and win detection
+-   Clean, intuitive UI design
+
+### Planned Features
+
+#### 1. Core Game Experience
+
+-   Smooth animations
+-   Haptic feedback
+-   Sound effects
+-   Enhanced visuals and polish
+-   Interactive tutorial
+
+#### 2. Progression System
+
+-   Daily puzzles
+-   Multiple difficulty levels
+-   Achievement system
+-   Score tracking
+-   Personal best records
+
+#### 3. Social Features
+
+-   Optional user accounts
+-   Global leaderboards
+-   Share scores and puzzles
+-   Friend challenges
+
+#### 4. Monetization
+
+-   Free to play
+-   Optional tip jar for support
+-   No ads or paywalls
+
+## Technical Stack
+
+-   **Frontend**: React Native + Expo
+-   **Backend**: Firebase (authentication, leaderboards)
+-   **Cloud**: Vercel (API hosting)
+-   **Analytics**: Firebase Analytics
+
+## Development Roadmap
+
+### 1. MVP Phase (2-3 weeks)
+
+-   Polish core gameplay
+-   Add basic animations
+-   Implement local storage
+-   Create app icon/splash screen
+-   Test on iOS/Android
+
+### 2. Enhancement Phase (2-3 weeks)
+
+-   Daily puzzle system
+-   Achievement system
+-   Basic profile system
+-   Local statistics
+
+### 3. Social Phase (2-3 weeks)
+
+-   User authentication
+-   Global leaderboards
+-   Share functionality
+-   Friend system
+
+### 4. Polish Phase (1-2 weeks)
+
+-   Performance optimization
+-   Bug fixes
+-   UI/UX improvements
+-   App store preparation
+
+### 5. Launch Phase
+
+-   Beta testing
+-   Store submissions
+-   Marketing materials
+-   Support system
+
+## Project Goals
+
+1. Create a polished, enjoyable puzzle game
+2. Build an active player community
+3. Maintain high app store ratings
+4. Generate enough support through tips to cover costs
+
+## Getting Started
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 2. Start the app
-
-   ```bash
+    ```bash
     npx expo start
-   ```
+    ```
 
-In the output, you'll find options to open the app in a
+## Development
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+This project uses [Expo](https://expo.dev) with file-based routing. The main game logic and components can be found in the `app` directory.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Contributing
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+We welcome contributions! Whether it's bug reports, feature suggestions, or code contributions, please feel free to help make illuminight better.
